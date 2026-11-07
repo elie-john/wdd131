@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD131</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. A home page for Eliejohn Tambwe featuring a short introduction, a place I call home, and web development resources.">
+  <meta name="author" content="Eliejohn Tambwe">
+  <title>WDD 131 – Dynamic Web Fundamentals - Eliejohn Tambwe</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
- <h1>WDD131 - elie-john</h1>   
+  <header class="site-header">
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <nav aria-label="Main navigation">
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&amp;id=p7#p7" target="_blank" rel="noopener noreferrer">Scripture</a>
+      <a href="#" aria-label="Final project link placeholder">Final Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Eliejohn Tambwe</h1>
+    <div class="cards">
+      <section class="card about-card" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <div class="card-content about-content">
+          <img class="portrait" src="images/profile.jpg" alt="Illustration of a person">
+          <p>
+            Hi! I’m Eliejohn Tambwe. I was born in
+            South Africa, and I’m studying web
+            development in WDD 131. I enjoy learning how thoughtful design
+            and code can make useful, welcoming experiences on the web. In
+            my free time, I like reading, watching series, keeping up to date with technology.
+          </p>
+
+          <h3 class="place-title">A Place I Call Home</h3>
+          <figure class="flag-figure">
+            <img src="images/Flag_of_South_Africa.svg.webp" alt="Decorative flag representing my home">
+            <figcaption>South Africa</figcaption>
+          </figure>
+          <p class="place-copy">
+            South Africa is a vibrant, multiethnic constitutional democracy located at the southern tip of the African continent, bordered by the Atlantic and Indian Oceans. Known as the "rainbow nation" for its rich cultural and linguistic diversity-featuring 11 official languages—the country has three capital cities: Pretoria (administrative), Cape Town (legislative), and Bloemfontein (judicial). Following the end of the apartheid regime and the historic 1994 democratic election of Nelson Mandela, South Africa established itself as a major economy on the continent, renowned for its diverse landscapes, wildlife, and complex history.
+          </p>
+        </div>
+      </section>
+
+      <section class="card resources-card" aria-labelledby="resources-heading">
+        <h2 id="resources-heading">Web Dev Resources</h2>
+        <div class="card-content">
+          <ul>
+            <li><a href="https://dev.to/" target="_blank" rel="noopener noreferrer">DEV Community</a></li>
+            <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener noreferrer">Smashing Magazine</a></li>
+            <li><a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS-Tricks</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+            <li><a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer">Udemy</a></li>
+            <li><a href="https://loremipsum.io/" target="_blank" rel="noopener noreferrer">Lorem Ipsum</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      ©<span id="currentyear"></span>
+      <span class="footer-name">Eliejohn Tambwe</span>
+      <span aria-hidden="true">🐼</span>
+      <span>🐼South Africa</span>
+    </p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>

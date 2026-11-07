@@ -1,0 +1,250 @@
+:root {
+  color-scheme: light;
+  --navy: #17496b;
+  --navy-dark: #103650;
+  --ink: #202a32;
+  --muted: #4a5964;
+  --line: #c7d1d8;
+  --paper: #fff;
+  --page: #f3f6f8;
+  font-family: "DM Sans", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--page);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  line-height: 1.65;
+}
+
+.site-header {
+  color: white;
+}
+
+#course-title {
+  display: block;
+  padding: 0.7rem 1rem;
+  background: var(--navy);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+  font-weight: 600;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 0.25rem;
+  padding: 0.4rem max(1rem, calc((100% - 1100px) / 2));
+  background: #26343d;
+}
+
+nav a {
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: #102f43;
+  background-color: #d8edf7;
+  outline: none;
+}
+
+main {
+  width: min(100% - 2rem, 1100px);
+  margin: 1.3rem auto 1rem;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  color: var(--navy-dark);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 600;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(250px, 1fr);
+  gap: 0.75rem;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  background: var(--paper);
+}
+
+.card h2 {
+  margin: 0;
+  padding: 0.55rem 1rem;
+  background: var(--navy);
+  color: #fff;
+  font-size: 1.08rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.card-content {
+  padding: 1rem 1.1rem;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 130px;
+  gap: 0.7rem 1rem;
+  align-items: start;
+}
+
+.about-content > p:first-of-type {
+  margin: 0;
+}
+
+.portrait {
+  grid-column: 2;
+  grid-row: 1;
+  width: 122px;
+  height: 152px;
+  justify-self: center;
+  border: 1px solid var(--line);
+  border-radius: 0.2rem;
+  background: #e9f1f5;
+}
+
+.place-title {
+  grid-column: 1 / -1;
+  margin: 0.2rem 0 0;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--navy-dark);
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.flag-figure {
+  grid-column: 1;
+  margin: 0.25rem 0;
+  text-align: center;
+}
+
+.flag-figure img {
+  display: block;
+  width: min(100%, 180px);
+  height: 88px;
+  margin: 0 auto 0.35rem;
+  border: 1px solid var(--line);
+}
+
+.flag-figure figcaption {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-style: italic;
+}
+
+.place-copy {
+  grid-column: 2;
+  margin: 0.25rem 0;
+}
+
+.resources-card .card-content {
+  display: flex;
+  min-height: 290px;
+  align-items: center;
+}
+
+.resources-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.resources-card li {
+  padding: 0.15rem 0;
+}
+
+.resources-card a {
+  color: #0645ad;
+  text-underline-offset: 0.15em;
+}
+
+.resources-card a:hover,
+.resources-card a:focus-visible {
+  color: #07345c;
+}
+
+footer {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--navy);
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  margin: 0.1rem;
+}
+
+footer p:first-child {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+footer p:last-child {
+  color: #fff3a6;
+  font-size: 0.88rem;
+}
+
+footer [aria-hidden="true"] {
+  color: #ffcf70;
+}
+
+@media (max-width: 700px) {
+  main {
+    width: min(100% - 1.25rem, 560px);
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-card .card-content {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 460px) {
+  nav {
+    padding-inline: 0.4rem;
+  }
+
+  nav a {
+    padding-inline: 0.45rem;
+    font-size: 0.92rem;
+  }
+
+  .about-content {
+    grid-template-columns: minmax(0, 1fr) 96px;
+    gap: 0.65rem;
+  }
+
+  .portrait {
+    width: 92px;
+    height: 118px;
+  }
+
+  .flag-figure img {
+    height: 66px;
+  }
+}
