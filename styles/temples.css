@@ -1,0 +1,75 @@
+:root {
+  color-scheme: light;
+  --purple: #3f0865;
+  --purple-dark: #31004f;
+  --ink: #17121b;
+  --accent: #5b2781;
+  --page-width: 1100px;
+  font-family: "Roboto", Arial, sans-serif;
+  color: var(--ink);
+  background: #fff;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+.site-header {
+  min-height: 5.6rem;
+  padding: .75rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem 1rem;
+  color: #fff;
+  background: var(--purple);
+}
+.site-title {
+  color: inherit;
+  font: 700 1.8rem/1.15 "Ubuntu", sans-serif;
+  text-decoration: none;
+}
+.menu-toggle {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: .25rem;
+  color: #fff;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+.menu-toggle:hover, .menu-toggle:focus-visible { background: #ffffff24; }
+.menu-toggle:focus-visible, .primary-navigation a:focus-visible { outline: 3px solid #ffd66b; outline-offset: 3px; }
+.menu-icon { font: 2rem/1 Arial, sans-serif; }
+.primary-navigation {
+  display: none;
+  flex: 0 0 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: .25rem;
+}
+.primary-navigation.is-open { display: flex; }
+.primary-navigation a {
+  padding: .7rem .8rem;
+  border-radius: .2rem;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+.primary-navigation a:hover, .primary-navigation a[aria-current="page"] { background: var(--purple-dark); text-decoration: underline; text-underline-offset: .25rem; }
+main { width: min(100% - 2rem, var(--page-width)); margin: 0 auto; }
+h1 { margin: 2rem 0 1.5rem; text-align: center; font: 500 1.6rem/1.2 "Ubuntu", sans-serif; }
+.temple-grid { display: grid; grid-template-columns: 1fr; gap: 1.6rem; padding-bottom: 2.5rem; }
+figure { margin: 0; text-align: center; }
+figure img { display: block; width: 100%; height: auto; aspect-ratio: 331 / 207; object-fit: cover; }
+figcaption { padding-top: .35rem; color: var(--accent); font-size: 1rem; }
+.site-footer { padding: .8rem 1rem .65rem; color: #fff; background: var(--purple); text-align: center; }
+.site-footer p { margin: 0; }
+.last-modified { padding-top: .15rem; font-size: .8rem; }
+@media (prefers-reduced-motion: no-preference) {
+  .primary-navigation a, .menu-toggle { transition: background-color .15s ease; }
+}
