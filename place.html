@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Discover South Africa, its beautiful landscapes, culture, and weather.">
+
+    <meta name="author" content="Your Name">
+
+    <title>South Africa | Country Page</title>
+
+    <link rel="stylesheet" href="styles/place.css">
+
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>South Africa</h1>
+    </header>
+
+    <main>
+
+        <div class="hero">
+            <picture>
+                <source
+                    media="(max-width: 600px)"
+                    srcset="images/south-africa-small.webp"
+                >
+
+                <img
+                    src="images/A wide landscape photograph of Table Mountain in Cape Town.jpg"
+                    alt="Beautiful view of Table Mountain in Cape Town, South Africa"
+                >
+            </picture>
+
+            <section class="data">
+                <h2>Data</h2>
+
+                <div class="info">
+                    <p><strong>Area:</strong></p>
+                    <p>1,221,037 km²</p>
+
+                    <p><strong>Population:</strong></p>
+                    <p>Approximately 63 million</p>
+
+                    <p><strong>Capital:</strong></p>
+                    <p>Pretoria</p>
+
+                    <p><strong>Languages:</strong></p>
+                    <p>12 official languages</p>
+
+                    <p><strong>Currency:</strong></p>
+                    <p>South African Rand (ZAR)</p>
+
+                    <p><strong>Continent:</strong></p>
+                    <p>Africa</p>
+                </div>
+            </section>
+
+            <section class="weather">
+                <h2>Weather</h2>
+
+                <img
+                    class="weather-icon"
+                    src="images/Weather icon.jpg"
+                    alt="Partly cloudy weather"
+                >
+
+                <div class="info">
+                    <p><strong>Temperature:</strong></p>
+                    <p><span id="temperature">18</span> °C</p>
+
+                    <p><strong>Conditions:</strong></p>
+                    <p>Partly Cloudy</p>
+
+                    <p><strong>Wind:</strong></p>
+                    <p><span id="wind-speed">12</span> km/h</p>
+
+                    <p><strong>Wind Chill:</strong></p>
+                    <p><span id="wind-chill">N/A</span></p>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            | South Africa | Your Name
+        </p>
+
+        <p>
+            Last Modified:
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+
+</body>
+</html>
