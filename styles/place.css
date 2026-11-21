@@ -1,9 +1,13 @@
 
-/* Global CSS Variables */
+/* =================================
+   GLOBAL CSS VARIABLES
+================================= */
+
 :root {
     --primary-color: #007749;
     --secondary-color: #ffb81c;
     --accent-color: #de3831;
+
     --dark-color: #222222;
     --light-color: #ffffff;
     --background-color: #f2f2f2;
@@ -12,7 +16,10 @@
     --body-font: Arial, sans-serif;
 }
 
-/* General Styles */
+/* =================================
+   GENERAL STYLES
+================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -30,8 +37,8 @@ header {
     background-color: var(--primary-color);
     color: var(--light-color);
     text-align: center;
-    padding: 20px;
-    border-bottom: 8px solid var(--secondary-color);
+    padding: 15px;
+    border-bottom: 6px solid var(--secondary-color);
 }
 
 header h1 {
@@ -44,6 +51,10 @@ main {
     margin: 0 auto;
 }
 
+/* =================================
+   HERO IMAGE
+================================= */
+
 .hero {
     position: relative;
 }
@@ -51,17 +62,19 @@ main {
 .hero picture img {
     display: block;
     width: 100%;
-    height: auto;
-    min-height: 250px;
+    height: 310px;
     object-fit: cover;
 }
 
-/* Data and Weather Sections */
+/* =================================
+   DATA AND WEATHER SECTIONS
+================================= */
+
 .data,
 .weather {
     background-color: var(--light-color);
     padding: 20px;
-    margin: 15px;
+    margin: 12px 10px;
     text-align: center;
 }
 
@@ -71,6 +84,7 @@ main {
     color: var(--light-color);
     padding: 10px;
     margin-bottom: 15px;
+    font-size: 1.4rem;
 }
 
 .info {
@@ -78,33 +92,50 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
     text-align: left;
+    font-size: 0.95rem;
 }
 
 .info p {
     padding: 3px;
 }
 
-.weather-icon {
-    width: 90px;
-    height: 90px;
-    margin: 10px auto;
-    display: block;
+.info strong {
+    font-weight: bold;
 }
 
-/* Footer */
+/* =================================
+   WEATHER ICON - MOBILE
+================================= */
+
+.weather-icon {
+    display: block;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin: 10px auto 15px;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
 footer {
     background-color: var(--primary-color);
     color: var(--light-color);
     text-align: center;
-    padding: 20px;
-    border-top: 8px solid var(--secondary-color);
+    padding: 18px 10px;
+    border-top: 6px solid var(--secondary-color);
+    font-size: 0.9rem;
 }
 
 footer p {
     margin: 5px;
 }
 
-/* Wider Screens */
+/* =================================
+   DESKTOP AND WIDER SCREENS
+================================= */
+
 @media screen and (min-width: 700px) {
 
     header h1 {
@@ -125,49 +156,61 @@ footer p {
     .data {
         position: absolute;
         top: 30px;
-        left: 20px;
+        left: 25px;
         width: 320px;
+        margin: 0;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     }
 
     .weather {
         position: absolute;
         bottom: 30px;
-        right: 20px;
+        right: 25px;
         width: 320px;
+        margin: 0;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Required weather pseudo-element */
-    .weather h2::after {
-        content: " ⛅";
-        margin-left: 10px;
-    }
-
-    /* Hide mobile weather icon on wider screens */
-    .weather-icon {
-        display: none;
     }
 
     .data h2,
     .weather h2 {
         background-color: var(--dark-color);
     }
+
+    /* Required desktop weather pseudo-element */
+
+    .weather h2::after {
+        content: " ⛅";
+        margin-left: 10px;
+    }
+
+    /* Hide mobile SVG on desktop */
+
+    .weather-icon {
+        display: none;
+    }
 }
 
-/* Small Screens */
-@media screen and (max-width: 699px) {
+/* =================================
+   EXTRA SMALL SCREENS
+================================= */
 
-    .hero picture img {
-        min-height: 250px;
+@media screen and (max-width: 380px) {
+
+    header h1 {
+        font-size: 1.7rem;
     }
 
     .data,
     .weather {
-        margin: 15px 10px;
+        padding: 15px;
     }
 
     .info {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
+        gap: 6px;
+    }
+
+    .info p {
+        overflow-wrap: anywhere;
     }
 }

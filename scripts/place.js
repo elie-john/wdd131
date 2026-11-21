@@ -6,8 +6,7 @@ document.querySelector("#currentyear").textContent = currentYear;
 
 
 // Get the last modified date
-document.querySelector("#lastModified").textContent =
-    document.lastModified;
+document.querySelector("#lastModified").textContent = document.lastModified;
 
 
 // Static weather values
